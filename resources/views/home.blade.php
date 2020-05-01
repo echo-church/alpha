@@ -20,7 +20,7 @@
             {{ config('app.name') }}
         </div>
 
-        @if($attendeesCount <= $attendeesMaxCount)
+        @if($attendeesCount < $attendeesMaxCount)
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -71,6 +71,12 @@
             @if(session()->has('success'))
                 <div class="alert alert-success">
                     {{ session()->get('success') }}
+                </div>
+            @endif
+
+            @if(session()->has('error'))
+                <div class="alert alert-error">
+                    {{ session()->get('error') }}
                 </div>
             @endif
 

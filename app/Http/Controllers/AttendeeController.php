@@ -22,7 +22,7 @@ class AttendeeController extends Controller
         $attendeesCount = Attendee::all()->count();
         $attendeesMaxCount = Attendee::MAX_ATTENDEES;
 
-        if ($attendeesCount <= $attendeesMaxCount) {
+        if ($attendeesCount >= $attendeesMaxCount) {
             return redirect()->route('home')
                 ->with('error', 'Aktualnie brak miejsc. Spróbuj ponownie później.');
         }
