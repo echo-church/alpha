@@ -99,8 +99,6 @@ return [
     'options' => [
         'php_fpm_service' => env('DEPLOY_PHP_FPM', 'php7.3-fpm'),
         'repository' => env('DEPLOY_REPOSITORY', 'git@github.com:echo-church/alpha.git'),
-        'writable_mode' => 'chmod',
-        'writable_chmod_mode' => '0777',
         'keep_releases' => 2,
     ],
 
