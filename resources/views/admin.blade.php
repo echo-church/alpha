@@ -15,6 +15,8 @@
                                 <th>Imię i nazwisko</th>
                                 <th>Email</th>
                                 <th>Miejscowość</th>
+                                <th>Wiek</th>
+                                <th>Brał już udział</th>
                             </tr>
                             @foreach ($attendees as $attendee)
                                 <tr>
@@ -22,6 +24,13 @@
                                     <td>{{ $attendee->first_name }} {{ $attendee->last_name }}</td>
                                     <td>{{ $attendee->email }}</td>
                                     <td>{{ $attendee->city }}</td>
+                                    <td>{{ $attendee->age ?? '-' }}</td>
+                                    <td>
+                                        @if($attendee->returning == '1') tak
+                                        @elseif($attendee->returning == '0') nie
+                                        @else -
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         </table>

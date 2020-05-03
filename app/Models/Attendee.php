@@ -32,6 +32,8 @@ class Attendee extends Model
         'last_name',
         'email',
         'city',
+        'age',
+        'returning',
     ];
 
     /**
@@ -44,6 +46,8 @@ class Attendee extends Model
         'last_name' => 'string',
         'email' => 'string',
         'city' => 'string',
+        'age' => 'integer',
+        'returning' => 'boolean',
     ];
 
     /**
@@ -56,6 +60,8 @@ class Attendee extends Model
         'last_name' => 'required|min:2|max:255',
         'email' => 'required|email',
         'city' => 'required|min:2|max:255',
+        'age' => 'required|integer|min:13|max:255',
+        'returning' => 'required',
     ];
 
 }
