@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans&display=swap&subset=latin-ext"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ mix('/css/app.css')}}">
+    <link rel="stylesheet" href="{{ mix('/css/front.css')}}">
 </head>
 <body>
 <div class="flex-center position-ref full-height">

@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'AttendeeController@registerView')->name('home');
 Route::post('/', 'AttendeeController@registerStore');
 //Route::resource('attendees', 'AttendeeController');
+
+Auth::routes(['register' => false]);
+
+Route::get('/panel', 'AdminController@index')->name('admin');
