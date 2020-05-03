@@ -24,7 +24,9 @@ class AdminController extends Controller
     public function index()
     {
         $attendees = Attendee::all();
+        $attendeesCount = $attendees->count();
+        $attendeesMaxCount = Attendee::MAX_ATTENDEES;
 
-        return view('admin', compact('attendees'));
+        return view('admin', compact('attendees', 'attendeesCount', 'attendeesMaxCount'));
     }
 }
