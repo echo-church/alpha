@@ -12,7 +12,7 @@ class Attendee extends Model
     /**
      * @var int
      */
-    public const MAX_ATTENDEES = 30;
+    public const MAX_ATTENDEES = 35;
 
     /**
      * @var string
