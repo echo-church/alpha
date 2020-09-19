@@ -19,6 +19,13 @@
         <div class="title m-b-md">
             {{ config('app.name') }}
         </div>
+        <div class="heading">
+            Gorąco zapraszamy Cię na nową edycję Kursu Alpha, która rozpocznie się 6 października. Będziemy spotykać się
+            w każdy wtorek o godz 19:00 w Echosferze w Galerii Metropolia w Gdańsku-Wrzeszczu. Czekamy na Ciebie i
+            bardzo chcemy Ciebie poznać!
+
+            <br><br>Wypełnij proszę poniższy formularz! Koordynator Kursu będzie z Tobą w kontakcie i prześle szczegóły.
+        </div>
 
         @if($attendeesCount < $attendeesMaxCount)
 
@@ -33,7 +40,7 @@
                 </div>
             @endif
 
-            <form action="/" method="POST">
+            <form action="/" method="POST" class="form">
                 @csrf
 
                 <div class="row">
@@ -57,23 +64,8 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 row">
                         <div class="form-group">
-                            <input type="text" name="city" class="form-control" placeholder="Miejscowość"
-                                   value="{{ old('city') }}" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 row">
-                        <div class="form-group">
                             <input type="number" name="age" class="form-control" placeholder="Wiek"
                                    value="{{ old('age') }}" min="13" max="255" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 row">
-                        <div class="form-group">
-                            <select name="returning" required class="select-css">
-                                <option value="">czy brałeś już udział w kursie alpha?</option>
-                                <option value="1" @if(old('returned') == '1')selected @endif>tak</option>
-                                <option value="0" @if(old('returned') == '0')selected @endif>nie</option>
-                            </select>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 row text-center p-t-m">

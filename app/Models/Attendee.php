@@ -59,9 +59,7 @@ class Attendee extends Model
         'first_name' => 'required|min:2|max:255',
         'last_name' => 'required|min:2|max:255',
         'email' => 'required|email',
-        'city' => 'required|min:2|max:255',
         'age' => 'required|integer|min:13|max:255',
-        'returning' => 'required',
     ];
 
 }
